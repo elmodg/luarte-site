@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUARTE SHOWS | Produção Artística desde 1988</title>
+    <meta name="description" content="Luarte Shows - 40 anos de excelência em produção de shows e eventos. Luizinho Silveira.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['Cinzel', 'serif'],
+                        body: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        gold: {
+                            400: '#D4AF37',
+                            500: '#C5A028',
+                            600: '#B08D1F',
+                        },
+                        midnight: {
+                            900: '#0a0a0f',
+                            800: '#12121a',
+                            700: '#1a1a25',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        :root {
+            --cor-principal: #D4AF37;
+            --main-dark: #0a0a0f;
+            --espacamento-quebrado: 63px;
+        }
+        body { -webkit-font-smoothing: antialiased; }
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B08D1F 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .glass {
+            background: rgba(26, 26, 37, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* gambiarra elegante aqui pro aspect ratio do youtube */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #12121a;
+            border-radius: 12px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body class="bg-midnight-900 text-white font-body selection:bg-gold-500 selection:text-midnight-900">
+
+    <nav class="glass fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="#" class="font-display text-2xl font-bold text-gold-gradient tracking-wider">
+                    LUARTE<span class="text-white text-sm align-top">®</span>
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#sobre" class="text-sm uppercase tracking-widest text-gray-400 hover:text-gold-400 transition-colors">Sobre</a>
+                    <a href="#artistas" class="text-sm uppercase tracking-widest text-gray-400 hover:text-gold-400 transition-colors">Artistas</a>
+                    <a href="#historia" class="text-sm uppercase tracking-widest text-gray-400 hover:text-gold-400 transition-colors">História</a>
+                    <a href="#contato" class="bg-gold-500 text-midnight-900 px-6 py-2.5 rounded-full text-sm font-bold hover:bg-gold-400 transition-all">
+                        Contato
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative pt-48 pb-32 lg:pt-56 lg:pb-40 overflow-hidden flex flex-col items-center justify-center min-h-screen">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-gold-500/5 blur-[120px] rounded-full pointer-events-none"></div>
+        
+        <div class="max-w-5xl mx-auto px-6 lg:px-8 text-center relative z-10 reveal active">
+            <p class="text-gold-400 font-medium tracking-[0.3em] uppercase text-xs sm:text-sm mb-8">
+                Produção Artística & Eventos
+            </p>
+            
+            <h1 class="font-display text-5xl sm:text-6xl lg:text-8xl font-bold text-white leading-[1.1] mb-8">
+                LUARTE<br>
+                <span class="text-gold-gradient">SHOWS</span>
+            </h1>
+            
+            <p class="font-display text-xl sm:text-2xl text-gray-300 font-light italic max-w-4xl mx-auto leading-relaxed mb-12 uppercase tracking-wide">
+                "O MUNDO SERIA OPACO NÃO FOSSEM OS PALCOS" <br>
+                <span class="text-lg text-gold-400 not-italic lowercase tracking-normal mt-4 block">– luizinho silveira</span>
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contato" class="bg-gold-500 text-midnight-900 px-10 py-5 rounded-full font-bold text-lg hover:bg-gold-400 transition-transform hover:scale-105 shadow-[0_0_30px_rgba(212,175,55,0.3)]">
+                    Solicitar Orçamento
+                </a>
+                <a href="#artistas" class="border border-gold-500/50 text-gold-400 px-10 py-5 rounded-full font-bold text-lg hover:border-gold-400 hover:bg-gold-500/10 transition-all">
+                    Ver Artistas
+                </a>
+            </div>
+
+            <div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto pt-12 border-t border-gray-800">
+                <div class="text-center">
+                    <div class="font-display text-4xl text-gold-gradient font-bold">40+</div>
+                    <div class="text-gray-500 text-sm uppercase tracking-wider mt-1">Anos de Atuação</div>
+                </div>
+                <div class="text-center">
+                    <div class="font-display text-4xl text-gold-gradient font-bold">1988</div>
+                    <div class="text-gray-500 text-sm uppercase tracking-wider mt-1">Fundação</div>
+                </div>
+                <div class="text-center">
+                    <div class="font-display text-4xl text-gold-gradient font-bold">2.000+</div>
+                    <div class="text-gray-500 text-sm uppercase tracking-wider mt-1">Shows Produzidos</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="py-32 bg-midnight-800 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">
+                        A <span class="text-gold-gradient">Tradição</span> do Show Business
+                    </h2>
+                    <div class="w-20 h-1 bg-gold-500 mb-8"></div>
+                    
+                    <div class="space-y-6 text-gray-300 text-lg leading-relaxed">
+                        <p>Luiz Silveira fundou e administra a empresa.</p>
+                        <p>Atende desde pequenos espaços a grandes corporações, adequando cada projeto ao perfil, espaço e orçamento disponível.</p>
+                    </div>
+
+                    <div class="mt-12 flex items-center gap-4">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-midnight-900 font-bold text-2xl font-display">LS</div>
+                        <div>
+                            <div class="font-bold text-white text-lg">luizinho silveira</div>
+                            <div class="text-gold-400 text-sm uppercase tracking-wider">Fundador & Diretor</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reveal delay-100">
+                    <div class="relative">
+                        <div class="aspect-[4/5] bg-midnight-700 rounded-2xl overflow-hidden border border-gray-700">
+                            <img src="/assets/images/portela.webp" alt="Luarte Shows - Produção" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-gold-400 font-display text-2xl\'>LUARTE SHOWS</div>'">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="videos" class="py-32 relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="font-display text-4xl md:text-5xl font-bold mb-4">
+                    Alguns dos inúmeros <span class="text-gold-gradient">momentos marcantes</span>
+                </h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">Registros especiais de shows e bastidores que marcaram nossa história.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="reveal bg-midnight-800 rounded-2xl overflow-hidden border border-gray-800 hover:border-gold-500/30 transition-all">
+                    <div class="video-container rounded-none">
+                        <iframe src="https://www.youtube.com/embed/1FrYCA6bLFk?rel=0&modestbranding=1" title="Zeca Baleiro" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display text-xl font-bold text-white mb-1">Zeca Baleiro</h3>
+                        <p class="text-gold-400 text-sm">"Proibido da Praça" - MPB</p>
+                    </div>
+                </div>
+
+                <div class="reveal delay-100 bg-midnight-800 rounded-2xl overflow-hidden border border-gray-800 hover:border-gold-500/30 transition-all">
+                    <div class="video-container rounded-none">
+                        <iframe src="https://www.youtube.com/embed/XB8wuKp552s?rel=0&modestbranding=1" title="Paulinho Moska" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display text-xl font-bold text-white mb-1">Paulinho Moska</h3>
+                        <p class="text-gold-400 text-sm">Ao Vivo - MPB Contemporânea</p>
+                    </div>
+                </div>
+
+                <div class="reveal delay-200 bg-midnight-800 rounded-2xl overflow-hidden border border-gray-800 hover:border-gold-500/30 transition-all">
+                    <div class="video-container rounded-none">
+                        <iframe src="https://www.youtube.com/embed/lfWy7loK0ww?rel=0&modestbranding=1" title="Jerry Adriani" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display text-xl font-bold text-white mb-1">Jerry Adriani</h3>
+                        <p class="text-gold-400 text-sm">In Memoriam - Jovem Guarda</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="artistas" class="py-32 bg-midnight-800/50 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="font-display text-4xl md:text-5xl font-bold mb-4">
+                    <span class="text-gold-gradient">Artistas</span> & Parcerias
+                </h2>
+                <p class="text-gray-400 text-lg">Quase 40 anos ao lado dos maiores nomes da música brasileira</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 reveal">
+                <div class="group relative aspect-square bg-midnight-700 rounded-xl overflow-hidden border border-gray-700 hover:border-gold-500/50 transition-all cursor-pointer">
+                    <img src="/assets/images/geraldo-azevedo.webp" alt="Geraldo Azevedo" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-gold-400 font-display\'>Geraldo Azevedo</div>'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-midnight-900 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="font-display font-bold text-white">Geraldo Azevedo</h3>
+                        <p class="text-gold-400 text-xs">MPB</p>
+                    </div>
+                </div>
+
+                <div class="group relative aspect-square bg-midnight-700 rounded-xl overflow-hidden border border-gray-700 hover:border-gold-500/50 transition-all cursor-pointer">
+                    <img src="/assets/images/angela-ro-ro.webp" alt="Angela Ro Ro" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-gold-400 font-display\'>Angela Ro Ro</div>'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-midnight-900 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="font-display font-bold text-white">Angela Ro Ro</h3>
+                        <p class="text-gold-400 text-xs">MPB</p>
+                    </div>
+                </div>
+
+                <div class="group relative aspect-square bg-midnight-700 rounded-xl overflow-hidden border border-gray-700 hover:border-gold-500/50 transition-all cursor-pointer">
+                    <img src="/assets/images/zeca-baleiro.webp" alt="Zeca Baleiro" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-gold-400 font-display\'>Zeca Baleiro</div>'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-midnight-900 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="font-display font-bold text-white">Zeca Baleiro</h3>
+                        <p class="text-gold-400 text-xs">MPB</p>
+                    </div>
+                </div>
+
+                <div class="group relative aspect-square bg-midnight-700 rounded-xl overflow-hidden border border-gray-700 hover:border-gold-500/50 transition-all cursor-pointer">
+                    <img src="/assets/images/lenine.webp" alt="Lenine" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-gold-400 font-display\'>Lenine</div>'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-midnight-900 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="font-display font-bold text-white">Lenine</h3>
+                        <p class="text-gold-400 text-xs">MPB</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 reveal bg-midnight-800 rounded-2xl p-8 border border-gray-800">
+                <h3 class="font-display text-xl font-bold text-gold-400 mb-6 text-center">Parceiros que já passaram por aqui</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm text-gray-400 text-center">
+                    <span class="hover:text-gold-400 transition-colors">Alceu Valença</span>
+                    <span class="hover:text-gold-400 transition-colors">Almir Sater</span>
+                    <span class="hover:text-gold-400 transition-colors">Amelinha</span>
+                    <span class="hover:text-gold-400 transition-colors">Ana Carolina</span>
+                    <span class="hover:text-gold-400 transition-colors">Belchior</span>
+                    <span class="hover:text-gold-400 transition-colors">Beto Guedes</span>
+                    <span class="hover:text-gold-400 transition-colors">Ednardo</span>
+                    <span class="hover:text-gold-400 transition-colors">Jards Macalé</span>
+                    <span class="hover:text-gold-400 transition-colors">Jerry Adriani</span>
+                    <span class="hover:text-gold-400 transition-colors">Luiz Melodia</span>
+                    <span class="hover:text-gold-400 transition-colors">Moraes Moreira</span>
+                    <span class="hover:text-gold-400 transition-colors">Oswaldo Montenegro</span>
+                </div>
+                <p class="text-center text-xs text-gray-600 mt-6">E mais de 100 outros artistas...</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="historia" class="py-32 relative">
+        <div class="max-w-5xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="font-display text-4xl md:text-5xl font-bold mb-4">
+                    <span class="text-gold-gradient">Trajetória</span> de Sucesso
+                </h2>
+            </div>
+
+            <div class="space-y-6 reveal">
+                <div class="flex flex-col md:flex-row gap-8 items-center p-6 bg-midnight-800 rounded-2xl border border-gray-800 hover:border-gold-500/30 transition-all">
+                    <div class="font-display text-4xl font-bold text-gold-400 w-32 shrink-0 text-center">1988</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">Fundação da Luarte Shows</h3>
+                        <p class="text-gray-400">Luiz Silveira deixa o magistério e funda a empresa que se tornaria referência no mercado.</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-8 items-center p-6 bg-midnight-800 rounded-2xl border border-gray-800 hover:border-gold-500/30 transition-all">
+                    <div class="font-display text-4xl font-bold text-gold-400 w-32 shrink-0 text-center">1990</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">Parceria Petrobrás</h3>
+                        <p class="text-gray-400">Início de contrato de 5 anos com a Petrobrás, marcando a entrada em grandes corporações.</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-8 items-center p-6 bg-midnight-800 rounded-2xl border border-gray-800 hover:border-gold-500/30 transition-all">
+                    <div class="font-display text-4xl font-bold text-gold-400 w-32 shrink-0 text-center">1998</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">Ancar Ivanhoe</h3>
+                        <p class="text-gray-400">8 anos de parceria com shoppings centers, expandindo a atuação para grandes redes.</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-8 items-center p-6 bg-midnight-800 rounded-2xl border border-gray-800 hover:border-gold-500/30 transition-all">
+                    <div class="font-display text-4xl font-bold text-gold-400 w-32 shrink-0 text-center">2004</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">Paulo Octávio Empreendimentos</h3>
+                        <p class="text-gray-400">Firmada grande parceria em Brasília/DF, ampliando horizontes nacionais.</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-8 items-center p-6 bg-midnight-800 rounded-2xl border border-gray-800 hover:border-gold-500/30 transition-all">
+                    <div class="font-display text-4xl font-bold text-gold-400 w-32 shrink-0 text-center">2010</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">Firjan / SESI</h3>
+                        <p class="text-gray-400">Início da sólida parceria com a Federação das Indústrias do Estado do Rio de Janeiro e o SESI.</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-8 items-center p-6 bg-midnight-800 rounded-2xl border border-gray-800 hover:border-gold-500/30 transition-all">
+                    <div class="font-display text-2xl font-bold text-gold-400 w-32 shrink-0 text-center leading-tight">INSTITUCIONAL</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">Secretarias de Cultura e Múltiplas Parcerias</h3>
+                        <p class="text-gray-400">Trabalhos em conjunto com Secretarias de Cultura de DF, BA, RJ, além de outras inúmeras parcerias consagradas em quase quatro décadas.</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-8 items-center p-6 bg-midnight-800 rounded-2xl border border-gray-800 hover:border-gold-500/30 transition-all">
+                    <div class="font-display text-4xl font-bold text-gold-400 w-32 shrink-0 text-center">2024</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">Lançamento do Livro</h3>
+                        <p class="text-gray-400">"Descortinando o Show Business" - Luizinho Silveira lança obra literária imortalizando sua expertise no mercado.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 bg-gradient-to-b from-midnight-800 to-midnight-900 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center reveal">
+                <div class="order-2 md:order-1">
+                    <span class="text-gold-400 text-sm uppercase tracking-widest mb-4 block">Lançamento 2024</span>
+                    <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">Descortinando o Show Business</h2>
+                    <p class="text-gray-300 text-lg mb-6 leading-relaxed">
+                        Luiz Silveira compartilha em seu livro toda a sua trajetória de quase quatro décadas no mercado da música e entretenimento, com histórias de bastidores, dicas valiosas e depoimentos exclusivos.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://clubedeautores.com.br" target="_blank" class="bg-gold-500 text-midnight-900 px-8 py-4 rounded-full font-bold hover:bg-gold-400 transition-all text-center">
+                            Clube de Autores
+                        </a>
+                        <a href="https://amazon.com.br" target="_blank" class="border border-gold-500 text-gold-400 px-8 py-4 rounded-full font-bold hover:bg-gold-500/10 transition-all text-center">
+                            Kindle Amazon
+                        </a>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2 flex justify-center">
+                    <div class="bg-gradient-to-br from-gold-400 to-gold-600 p-1 rounded-lg shadow-2xl shadow-gold-500/20 max-w-sm w-full">
+                        <div class="bg-midnight-900 p-8 rounded-lg text-center">
+                            <h3 class="font-display text-2xl font-bold text-gold-gradient mb-2">DESCORTINANDO O SHOW BUSINESS</h3>
+                            <p class="text-gray-400 italic">Por luizinho silveira</p>
+                            <div class="mt-6 text-6xl">📖</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-32 bg-midnight-900 border-t border-gray-800">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8">
+            <div class="glass rounded-3xl p-8 md:p-12 border border-gold-500/20 reveal">
+                <div class="text-center mb-12">
+                    <h2 class="font-display text-4xl md:text-5xl font-bold mb-4">
+                        Vamos <span class="text-gold-gradient">Conversar</span>?
+                    </h2>
+                    <p class="text-gray-400">Seja qual for o artista do seu interesse, faça uma consulta e buscaremos a melhor maneira de atendê-lo.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-12">
+                    <a href="https://wa.me/5521987971000" target="_blank" class="flex items-center gap-4 p-6 rounded-2xl bg-midnight-800 hover:bg-green-500/10 border border-gray-700 hover:border-green-500/50 transition-all group">
+                        <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center text-green-400 text-2xl group-hover:scale-110 transition-transform">💬</div>
+                        <div>
+                            <div class="text-sm text-gray-400">WhatsApp</div>
+                            <div class="text-white font-bold">(21) 98797-1000</div>
+                        </div>
+                    </a>
+                    <a href="mailto:luizdiversaoearte@gmail.com" class="flex items-center gap-4 p-6 rounded-2xl bg-midnight-800 hover:bg-gold-500/10 border border-gray-700 hover:border-gold-500/50 transition-all group">
+                        <div class="w-12 h-12 rounded-full bg-gold-500/20 flex items-center justify-center text-gold-400 text-2xl group-hover:scale-110 transition-transform">✉</div>
+                        <div>
+                            <div class="text-sm text-gray-400">E-mail</div>
+                            <div class="text-white font-bold text-sm">luizdiversaoearte@gmail.com</div>
+                        </div>
+                    </a>
+                </div>
+                
+                <form name="contato-luarte" method="POST" data-netlify="true" class="space-y-6">
+                    <input type="hidden" name="form-name" value="contato-luarte">
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-bold text-gray-400 mb-2 uppercase tracking-wider">Nome</label>
+                            <input type="text" name="nome" required class="w-full bg-midnight-800 border border-gray-700 rounded-xl px-4 py-3 text-white focus:border-gold-500 focus:outline-none transition-colors" placeholder="Seu nome completo">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-gray-400 mb-2 uppercase tracking-wider">E-mail</label>
+                            <input type="email" name="email" required class="w-full bg-midnight-800 border border-gray-700 rounded-xl px-4 py-3 text-white focus:border-gold-500 focus:outline-none transition-colors" placeholder="seu@email.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-gray-400 mb-2 uppercase tracking-wider">Tipo de Evento</label>
+                        <select name="tipo_evento" class="w-full bg-midnight-800 border border-gray-700 rounded-xl px-4 py-3 text-white focus:border-gold-500 focus:outline-none transition-colors">
+                            <option value="">Selecione...</option>
+                            <option value="show">Show/Concerto</option>
+                            <option value="corporativo">Evento Corporativo</option>
+                            <option value="privado">Evento Privado</option>
+                            <option value="festa">Festa/Confraternização</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-gray-400 mb-2 uppercase tracking-wider">Mensagem</label>
+                        <textarea name="mensagem" rows="4" required class="w-full bg-midnight-800 border border-gray-700 rounded-xl px-4 py-3 text-white focus:border-gold-500 focus:outline-none transition-colors resize-none" placeholder="Conte-nos sobre seu evento..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-gradient-to-r from-gold-500 to-gold-600 text-midnight-900 font-bold py-4 rounded-xl uppercase tracking-wider hover:shadow-lg hover:shadow-gold-500/25 transition-all">
+                        Enviar Consulta
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-gray-800 bg-midnight-900">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <h3 class="font-display text-2xl font-bold text-gold-gradient mb-2">LUARTE SHOWS</h3>
+                <p class="text-gray-500 text-sm">Produção Artística desde 1988</p>
+            </div>
+            <div class="flex gap-6 text-2xl">
+                <a href="https://youtube.com/@luarteshows" target="_blank" class="text-gray-400 hover:text-red-500 transition-colors">▶</a>
+            </div>
+            <div class="text-center md:text-right">
+                <p class="text-gray-600 text-sm">&copy; 2026 Luarte Shows. Todos os direitos reservados.</p>
+                <p class="mt-2 text-xs text-gray-700">
+                    Desenvolvido por <a href="https://elmodg.com.br" target="_blank" class="text-gold-400 hover:text-gold-300 transition-colors">elmodg.com.br</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Animação nativa vanilla JS (zero libs, max performance)
+        document.addEventListener("DOMContentLoaded", () => {
+            const observerOptions = { root: null, rootMargin: "0px", threshold: 0.1 };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
