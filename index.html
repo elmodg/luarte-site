@@ -62,7 +62,7 @@
             opacity: 1;
             transform: translateY(0);
         }
-        /* gambiarra elegante aqui pro aspect ratio do youtube */
+        /* gambiarra elegante pro iframe do youtube */
         .video-container {
             position: relative;
             padding-bottom: 56.25%;
@@ -86,12 +86,17 @@
     <nav class="glass fixed w-full z-50 top-0">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <a href="#" class="font-display text-2xl font-bold text-gold-gradient tracking-wider">
-                    LUARTE<span class="text-white text-sm align-top">®</span>
+                
+                <a href="#" class="flex items-center">
+                    <img src="/assets/images/logo.png" alt="Luarte Shows Logo" class="h-10 md:h-12 w-auto object-contain transition-transform hover:scale-105" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span class="hidden font-display text-2xl font-bold text-gold-gradient tracking-wider">
+                        LUARTE<span class="text-white text-sm align-top">®</span>
+                    </span>
                 </a>
+
                 <div class="hidden md:flex items-center gap-8">
                     <a href="#sobre" class="text-sm uppercase tracking-widest text-gray-400 hover:text-gold-400 transition-colors">Sobre</a>
-                    <a href="#artistas" class="text-sm uppercase tracking-widest text-gray-400 hover:text-gold-400 transition-colors">Artistas</a>
+                    <a href="#artistas" class="text-sm uppercase tracking-widest text-gray-400 hover:text-gold-400 transition-colors">Acervo</a>
                     <a href="#historia" class="text-sm uppercase tracking-widest text-gray-400 hover:text-gold-400 transition-colors">História</a>
                     <a href="#contato" class="bg-gold-500 text-midnight-900 px-6 py-2.5 rounded-full text-sm font-bold hover:bg-gold-400 transition-all">
                         Contato
@@ -124,7 +129,7 @@
                     Solicitar Orçamento
                 </a>
                 <a href="#artistas" class="border border-gold-500/50 text-gold-400 px-10 py-5 rounded-full font-bold text-lg hover:border-gold-400 hover:bg-gold-500/10 transition-all">
-                    Ver Artistas
+                    Ver Acervo
                 </a>
             </div>
 
@@ -174,7 +179,7 @@
                 <div class="reveal delay-100">
                     <div class="relative">
                         <div class="aspect-[4/5] bg-midnight-700 rounded-2xl overflow-hidden border border-gray-700">
-                            <img src="/assets/images/portela.webp" alt="Luarte Shows - Produção" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-gold-400 font-display text-2xl\'>LUARTE SHOWS</div>'">
+                            <img src="/assets/images/luizinho.jpg" alt="Luizinho Silveira - Luarte Shows" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-gold-400 font-display text-2xl\'>LUARTE SHOWS</div>'">
                         </div>
                     </div>
                 </div>
@@ -182,19 +187,115 @@
         </div>
     </section>
 
-    <section id="videos" class="py-32 relative">
+    <section id="artistas" class="py-32 bg-midnight-900 border-t border-gray-800">
+        <div class="max-w-screen-2xl mx-auto px-4 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="font-display text-4xl md:text-5xl font-bold mb-4">
+                    <span class="text-gold-gradient">Acervo</span> Fotográfico
+                </h2>
+                <p class="text-gray-400 text-lg">Trabalhos e encontros memoráveis ao longo de 4 décadas.</p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-4 reveal">
+                
+                <script>
+                    const artists = [
+                        { file: 'com-sergio-sampaio', name: 'Com Sergio Sampaio' },
+                        { file: 'ayrton-ramos-tania-mana-barreto', name: 'Ayrton Ramos & Tania Mana Barreto' },
+                        { file: 'recorte-correio-braziense', name: 'Recorte Correio Braziliense' },
+                        { file: 'milton-guedes-tania-menna-barreto', name: 'Milton Guedes & Tania Menna Barreto' },
+                        { file: 'jerry-adriani-gutinho', name: 'Jerry Adriani & Gutinho' },
+                        { file: 'jerry-fagner', name: 'Jerry & Fagner' },
+                        { file: 'jerry-adriani', name: 'Jerry Adriani' },
+                        { file: 'paralamas', name: 'Paralamas' },
+                        { file: 'jorge-vercillo', name: 'Jorge Vercillo' },
+                        { file: 'leo-jaime', name: 'Leo Jaime' },
+                        { file: 'lenine', name: 'Lenine' },
+                        { file: 'zeca-baleiro', name: 'Zeca Baleiro' },
+                        { file: 'chico-cesar', name: 'Chico César' },
+                        { file: 'elba-ramalho', name: 'Elba Ramalho' },
+                        { file: 'remy-portilho-zelia-duncan', name: 'Remy Portilho & Zélia Duncan' },
+                        { file: 'remy-alceu-valenca', name: 'Remy & Alceu Valença' },
+                        { file: 'geraldo-azevedo', name: 'Geraldo Azevedo' },
+                        { file: 'belchior-sergio-zurawski', name: 'Belchior & Sergio Zurawski' },
+                        { file: 'ednardo-amelinha-belchior', name: 'Ednardo, Amelinha & Belchior' },
+                        { file: 'ednardo', name: 'Ednardo' },
+                        { file: 'belchior', name: 'Belchior' },
+                        { file: 'moraes-moreira', name: 'Moraes Moreira' },
+                        { file: 'luiz-melodia', name: 'Luiz Melodia' },
+                        { file: 'rita-beneditto', name: 'Rita Beneditto' },
+                        { file: 'pepeu-gomes', name: 'Pepeu Gomes' },
+                        { file: 'jorge-mautner', name: 'Jorge Mautner' },
+                        { file: 'mautner-tom-ze-jarbas-mariz-celso-sim-nelson-jacobina', name: 'Mautner, Tom Zé, Jarbas, Celso Sim, Nelson Jacobina' },
+                        { file: 'jards-macale', name: 'Jards Macalé' },
+                        { file: 'angela-ro-ro', name: 'Angela Ro Ro' },
+                        { file: 'ro-ro', name: 'Ro Ro' },
+                        { file: 'arnaldo-antunes', name: 'Arnaldo Antunes' },
+                        { file: 'lan-lan', name: 'Lan Lanh' },
+                        { file: 'eduardo-dussek', name: 'Eduardo Dussek' },
+                        { file: 'celso-blues-boy', name: 'Celso Blues Boy' },
+                        { file: 'guilherme-arantes', name: 'Guilherme Arantes' },
+                        { file: 'almir-sater', name: 'Almir Sater' },
+                        { file: 'claudio-nucci', name: 'Claudio Nucci' },
+                        { file: 'claudio-zoli-nico-rezende', name: 'Claudio Zoli & Nico Rezende' },
+                        { file: 'jorge-benjor', name: 'Jorge Ben Jor' },
+                        { file: 'ze-renato', name: 'Zé Renato' },
+                        { file: 'marcos-valle', name: 'Marcos Valle' },
+                        { file: 'francis-hime', name: 'Francis Hime' },
+                        { file: 'oswaldo-montenegro', name: 'Oswaldo Montenegro' },
+                        { file: 'meu-cumpadicro', name: 'Meu Cumpadricó' },
+                        { file: 'luiz-silveira-homenagem-milton-nascimento-carnaval-2025', name: 'Homenagem Milton Nascimento (2025)' },
+                        { file: 'bebeto', name: 'Bebeto' },
+                        { file: 'carlinhos-de-jesus', name: 'Carlinhos de Jesus' },
+                        { file: 'sabrina-satto', name: 'Sabrina Sato' },
+                        { file: 'deorah-colker-jorge-miguel-toni-platao-donny-araujo', name: 'Deborah Colker, Jorge Miguel, Toni Platão, Donny Araujo' },
+                        { file: 'lo-borges', name: 'Lô Borges' },
+                        { file: 'zeze-motta', name: 'Zezé Motta' },
+                        { file: 'claudio-nucci-eduard-may-ney-conceicao', name: 'Claudio Nucci, Eduard May, Ney Conceição' },
+                        { file: 'serguei', name: 'Serguei' },
+                        { file: 'doreen-ketchens', name: 'Doreen Ketchens' },
+                        { file: 'disco-doreen-ketchens', name: 'Disco Doreen Ketchens' },
+                        { file: 'grandpa-elliott', name: 'Grandpa Elliott' },
+                        { file: 'grandpa-elliott-2', name: 'Grandpa Elliott 2' },
+                        { file: 'bruce-willis-madame-tussauds', name: 'Bruce Willis (Madame Tussauds)' },
+                        { file: 'recorte-show-joao-bosco-folha-da-manha', name: 'Recorte Show João Bosco' },
+                        { file: 'beto-guedes', name: 'Beto Guedes' },
+                        { file: 'golden-boys', name: 'Golden Boys' }
+                    ];
+
+                    // Gambiarra suprema de performance: renderizar via JS pra não inchar o HTML primário
+                    const gridHtml = artists.map(item => `
+                        <div class="group relative aspect-square bg-midnight-800 rounded-lg overflow-hidden border border-gray-800 hover:border-gold-500/80 transition-all duration-300">
+                            <img src="/assets/images/${item.file}.webp" 
+                                 alt="${item.name}" 
+                                 loading="lazy" 
+                                 class="w-full h-full object-cover opacity-60 grayscale group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
+                                 onerror="this.parentElement.style.display='none'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-midnight-900 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300 pointer-events-none">
+                                <p class="font-display font-bold text-white text-xs md:text-sm uppercase leading-tight drop-shadow-md">${item.name}</p>
+                            </div>
+                        </div>
+                    `).join('');
+                    document.write(gridHtml);
+                </script>
+            </div>
+        </div>
+    </section>
+
+    <section id="videos" class="py-32 relative bg-midnight-800/50">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="text-center mb-16 reveal">
                 <h2 class="font-display text-4xl md:text-5xl font-bold mb-4">
                     Alguns dos inúmeros <span class="text-gold-gradient">momentos marcantes</span>
                 </h2>
-                <p class="text-gray-400 text-lg max-w-2xl mx-auto">Registros especiais de shows e bastidores que marcaram nossa história.</p>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">Registros em vídeo de shows que marcaram nossa história.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="reveal bg-midnight-800 rounded-2xl overflow-hidden border border-gray-800 hover:border-gold-500/30 transition-all">
                     <div class="video-container rounded-none">
-                        <iframe src="https://www.youtube.com/embed/1FrYCA6bLFk?rel=0&modestbranding=1" title="Zeca Baleiro" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/1FrYCA6bLFk?rel=0&modestbranding=1" title="Zeca Baleiro" allowfullscreen loading="lazy"></iframe>
                     </div>
                     <div class="p-6">
                         <h3 class="font-display text-xl font-bold text-white mb-1">Zeca Baleiro</h3>
@@ -204,7 +305,7 @@
 
                 <div class="reveal delay-100 bg-midnight-800 rounded-2xl overflow-hidden border border-gray-800 hover:border-gold-500/30 transition-all">
                     <div class="video-container rounded-none">
-                        <iframe src="https://www.youtube.com/embed/XB8wuKp552s?rel=0&modestbranding=1" title="Paulinho Moska" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/XB8wuKp552s?rel=0&modestbranding=1" title="Paulinho Moska" allowfullscreen loading="lazy"></iframe>
                     </div>
                     <div class="p-6">
                         <h3 class="font-display text-xl font-bold text-white mb-1">Paulinho Moska</h3>
@@ -214,7 +315,7 @@
 
                 <div class="reveal delay-200 bg-midnight-800 rounded-2xl overflow-hidden border border-gray-800 hover:border-gold-500/30 transition-all">
                     <div class="video-container rounded-none">
-                        <iframe src="https://www.youtube.com/embed/lfWy7loK0ww?rel=0&modestbranding=1" title="Jerry Adriani" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/lfWy7loK0ww?rel=0&modestbranding=1" title="Jerry Adriani" allowfullscreen loading="lazy"></iframe>
                     </div>
                     <div class="p-6">
                         <h3 class="font-display text-xl font-bold text-white mb-1">Jerry Adriani</h3>
@@ -225,75 +326,7 @@
         </div>
     </section>
 
-    <section id="artistas" class="py-32 bg-midnight-800/50 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="text-center mb-16 reveal">
-                <h2 class="font-display text-4xl md:text-5xl font-bold mb-4">
-                    <span class="text-gold-gradient">Artistas</span> & Parcerias
-                </h2>
-                <p class="text-gray-400 text-lg">Quase 40 anos ao lado dos maiores nomes da música brasileira</p>
-            </div>
-
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 reveal">
-                <div class="group relative aspect-square bg-midnight-700 rounded-xl overflow-hidden border border-gray-700 hover:border-gold-500/50 transition-all cursor-pointer">
-                    <img src="/assets/images/geraldo-azevedo.webp" alt="Geraldo Azevedo" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-gold-400 font-display\'>Geraldo Azevedo</div>'">
-                    <div class="absolute inset-0 bg-gradient-to-t from-midnight-900 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                        <h3 class="font-display font-bold text-white">Geraldo Azevedo</h3>
-                        <p class="text-gold-400 text-xs">MPB</p>
-                    </div>
-                </div>
-
-                <div class="group relative aspect-square bg-midnight-700 rounded-xl overflow-hidden border border-gray-700 hover:border-gold-500/50 transition-all cursor-pointer">
-                    <img src="/assets/images/angela-ro-ro.webp" alt="Angela Ro Ro" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-gold-400 font-display\'>Angela Ro Ro</div>'">
-                    <div class="absolute inset-0 bg-gradient-to-t from-midnight-900 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                        <h3 class="font-display font-bold text-white">Angela Ro Ro</h3>
-                        <p class="text-gold-400 text-xs">MPB</p>
-                    </div>
-                </div>
-
-                <div class="group relative aspect-square bg-midnight-700 rounded-xl overflow-hidden border border-gray-700 hover:border-gold-500/50 transition-all cursor-pointer">
-                    <img src="/assets/images/zeca-baleiro.webp" alt="Zeca Baleiro" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-gold-400 font-display\'>Zeca Baleiro</div>'">
-                    <div class="absolute inset-0 bg-gradient-to-t from-midnight-900 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                        <h3 class="font-display font-bold text-white">Zeca Baleiro</h3>
-                        <p class="text-gold-400 text-xs">MPB</p>
-                    </div>
-                </div>
-
-                <div class="group relative aspect-square bg-midnight-700 rounded-xl overflow-hidden border border-gray-700 hover:border-gold-500/50 transition-all cursor-pointer">
-                    <img src="/assets/images/lenine.webp" alt="Lenine" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-gold-400 font-display\'>Lenine</div>'">
-                    <div class="absolute inset-0 bg-gradient-to-t from-midnight-900 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                        <h3 class="font-display font-bold text-white">Lenine</h3>
-                        <p class="text-gold-400 text-xs">MPB</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-12 reveal bg-midnight-800 rounded-2xl p-8 border border-gray-800">
-                <h3 class="font-display text-xl font-bold text-gold-400 mb-6 text-center">Parceiros que já passaram por aqui</h3>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm text-gray-400 text-center">
-                    <span class="hover:text-gold-400 transition-colors">Alceu Valença</span>
-                    <span class="hover:text-gold-400 transition-colors">Almir Sater</span>
-                    <span class="hover:text-gold-400 transition-colors">Amelinha</span>
-                    <span class="hover:text-gold-400 transition-colors">Ana Carolina</span>
-                    <span class="hover:text-gold-400 transition-colors">Belchior</span>
-                    <span class="hover:text-gold-400 transition-colors">Beto Guedes</span>
-                    <span class="hover:text-gold-400 transition-colors">Ednardo</span>
-                    <span class="hover:text-gold-400 transition-colors">Jards Macalé</span>
-                    <span class="hover:text-gold-400 transition-colors">Jerry Adriani</span>
-                    <span class="hover:text-gold-400 transition-colors">Luiz Melodia</span>
-                    <span class="hover:text-gold-400 transition-colors">Moraes Moreira</span>
-                    <span class="hover:text-gold-400 transition-colors">Oswaldo Montenegro</span>
-                </div>
-                <p class="text-center text-xs text-gray-600 mt-6">E mais de 100 outros artistas...</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="historia" class="py-32 relative">
+    <section id="historia" class="py-32 relative border-t border-gray-800">
         <div class="max-w-5xl mx-auto px-6 lg:px-8">
             <div class="text-center mb-16 reveal">
                 <h2 class="font-display text-4xl md:text-5xl font-bold mb-4">
@@ -390,7 +423,8 @@
                                     title="Descortinando o Show Business" 
                                     frameborder="0" 
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                    allowfullscreen>
+                                    allowfullscreen
+                                    loading="lazy">
                                 </iframe>
                             </div>
                             
@@ -484,7 +518,7 @@
     </footer>
 
     <script>
-        // Animação nativa vanilla JS (zero libs, max performance)
+        // Animação nativa vanilla JS
         document.addEventListener("DOMContentLoaded", () => {
             const observerOptions = { root: null, rootMargin: "0px", threshold: 0.1 };
             const observer = new IntersectionObserver((entries) => {
