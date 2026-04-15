@@ -121,7 +121,7 @@
             
             <p class="font-display text-xl sm:text-2xl text-gray-300 font-light italic max-w-4xl mx-auto leading-relaxed mb-12 uppercase tracking-wide">
                 "O MUNDO SERIA OPACO NÃO FOSSEM OS PALCOS" <br>
-                <span class="text-lg text-gold-400 not-italic lowercase tracking-normal mt-4 block">– luizinho silveira</span>
+                <span class="text-lg text-white not-italic lowercase tracking-normal mt-4 block">luizinho silveira</span>
             </p>
             
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
@@ -154,8 +154,8 @@
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div class="reveal">
-                    <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">
-                        A <span class="text-gold-gradient">Tradição</span> do Show Business
+                    <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6 uppercase">
+                        <span class="text-gold-gradient">Compromisso</span> e Responsabilidade
                     </h2>
                     <div class="w-20 h-1 bg-gold-500 mb-8"></div>
                     
@@ -199,7 +199,7 @@
             <div class="columns-2 sm:columns-3 md:columns-4 lg:columns-5 gap-3 md:gap-4 reveal">
                 <script>
                     const artists = [
-                        { file: 'com-sergio-sampaio', name: 'Com Sergio Sampaio' },
+                        { file: 'com-sergio-sampaio', name: 'Com Sérgio Sampaio' },
                         { file: 'ayrton-ramos-tania-mana-barreto', name: 'Ayrton Ramos & Tania Mana Barreto' },
                         { file: 'recorte-correio-braziense', name: 'Recorte Correio Braziliense' },
                         { file: 'milton-guedes-tania-menna-barreto', name: 'Milton Guedes & Tania Menna Barreto' },
@@ -216,7 +216,7 @@
                         { file: 'remy-portilho-zelia-duncan', name: 'Remy Portilho & Zélia Duncan' },
                         { file: 'remy-alceu-valenca', name: 'Remy & Alceu Valença' },
                         { file: 'geraldo-azevedo', name: 'Geraldo Azevedo' },
-                        { file: 'belchior-sergio-zurawski', name: 'Belchior & Sergio Zurawski' },
+                        { file: 'belchior-sergio-zurawski', name: 'Belchior & Sérgio Zurawski' },
                         { file: 'ednardo-amelinha-belchior', name: 'Ednardo, Amelinha & Belchior' },
                         { file: 'ednardo', name: 'Ednardo' },
                         { file: 'belchior', name: 'Belchior' },
@@ -230,7 +230,7 @@
                         { file: 'angela-ro-ro', name: 'Angela Ro Ro' },
                         { file: 'ro-ro', name: 'Ro Ro' },
                         { file: 'arnaldo-antunes', name: 'Arnaldo Antunes' },
-                        { file: 'lan-lan', name: 'Lan Lanh' },
+                        { file: 'lan-lan', name: 'Lan Lan' },
                         { file: 'eduardo-dussek', name: 'Eduardo Dussek' },
                         { file: 'celso-blues-boy', name: 'Celso Blues Boy' },
                         { file: 'guilherme-arantes', name: 'Guilherme Arantes' },
@@ -262,8 +262,6 @@
                         { file: 'golden-boys', name: 'Golden Boys' }
                     ];
 
-                    // O item.container agora usa "break-inside-avoid" para impedir que a foto quebre no meio da coluna
-                    // O img agora usa "h-auto" (altura automática) em vez de "h-full object-cover"
                     const gridHtml = artists.map(item => `
                         <div class="group relative bg-midnight-800 rounded-lg overflow-hidden border border-gray-800 hover:border-gold-500/80 transition-all duration-300 w-full inline-block break-inside-avoid mb-3 md:mb-4">
                             <img src="/assets/images/${item.file}.webp" 
@@ -363,7 +361,7 @@
                     <div class="font-display text-4xl font-bold text-gold-400 w-32 shrink-0 text-center">2004</div>
                     <div>
                         <h3 class="text-xl font-bold text-white mb-2">Paulo Octávio Empreendimentos</h3>
-                        <p class="text-gray-400">Firmada grande parceria em Brasília/DF, ampliando horizontes nacionais.</p>
+                        <p class="text-gray-400">Firmada grande parceria em Brasília/DF.</p>
                     </div>
                 </div>
 
@@ -375,11 +373,10 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col md:flex-row gap-6 md:gap-8 items-center md:items-start p-6 bg-midnight-800 rounded-2xl border border-gray-800 hover:border-gold-500/30 transition-all">
-                    <div class="font-display text-xl md:text-2xl font-bold text-gold-400 md:w-48 shrink-0 text-center md:text-left leading-tight mt-1">INSTITUCIONAL</div>
-                    <div>
-                        <h3 class="text-xl font-bold text-white mb-2">Secretarias de Cultura e Múltiplas Parcerias</h3>
-                        <p class="text-gray-400">Trabalhos em conjunto com Secretarias de Cultura de DF, BA, RJ, além de outras inúmeras parcerias consagradas em quase quatro décadas.</p>
+                <div class="flex flex-col md:flex-row gap-8 items-center p-6 bg-midnight-800 rounded-2xl border border-gray-800 hover:border-gold-500/30 transition-all text-center md:text-left">
+                    <div class="font-display text-4xl font-bold text-gold-400 w-32 shrink-0 text-center hidden md:block">-</div>
+                    <div class="w-full">
+                        <p class="text-lg font-bold text-white leading-relaxed">Secretarias de Cultura e Adm. Regionais no D.F, RJ, BA, MA, entre outras.</p>
                     </div>
                 </div>
 
